@@ -1,0 +1,49 @@
+# Pre-Processing of Dataset Before Analysis (for data stored as HDF5/h5 file format)
+#### Skip this step if you are the creator of the .h5 file or if your data is not stored as .h5
+
+## Navigating the hierarchal file to find your dataset. 
+The Hierarchal Data Format (HDF) files are commonly used in materials science and can be recognised by the .h5 suffix. HDF files are frequently used as they can store large quantities of data efficiently. 
+- Every HDF file can contain groups and datasets. 
+- Groups can contain other groups or a dataset. 
+- These files are useful as they allow the creator to store experiment paramaters in the same place as the experimental data. 
+
+### Downloading the file
+1. Download your file into the same environment as you have installed xds, meerkat, dials
+2. In your preferred IDE, make a python file and import the following:
+```
+import h5py
+import os
+import numpy as np
+import hdf5plugin
+import matplotlib.pyplot as plt
+import fabio
+```
+3. Make your file a variable:
+```
+x = h5py.File('your_file_name.h5', 'r') 
+
+```
+Where 'r' is to specify that the file is to be read. If your python file is not in the same directory as your downloaded .h5 file, add the path like so:
+```
+x = h5py.File('path/to/your/file/your_file_name.h5', 'r')
+
+```
+4. Print the entry point of your file:
+```
+print(x.keys())
+
+```
+5. from here, loop through every group & sub group with a simple for loop until you have found your dataset. 
+
+6. Once you have found your dataset, access it as follows:
+```
+data = x['entry/path/to/dataset/dataset']
+
+```
+7. Check if accessing was successful by portraying a frame using matplotlib:
+```
+plt.imshow(data[0], clim=[input your colour limits])
+plt.show()
+
+```
+Now you have successfully accessed your data and you can proceed to the next tutorial. 
