@@ -17,3 +17,6 @@
 6. Mdx2
 7. Image Processing
 8. Practice Data
+
+## Instructions
+- Please follow the tutorials above **in order** and read the instructions carefully. If there is an issue with some of the code please report it so it can be fixed. 
