@@ -9,4 +9,11 @@
 - This process can either be followed with the user's own dataset(s) or by using the provided data set of magnetite at room temperature (25°C) 
 
 ## Structure
-
+1. Installation
+2. Pre Processing
+3. XDS
+4. meerkat
+5. DIALS
+6. Mdx2
+7. Image Processing
+8. Practice Data
