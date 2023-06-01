@@ -23,3 +23,7 @@
 - Please follow the tutorials above **in order** and read the instructions carefully. If there is an issue with some of the code please report it so it can be fixed. 
 - All of the code and instructions are for arm-64, Mac M1 operating systems. Most of the code should translate to other operating systems and chips. 
 
+### Citations
+https://github.com/ando-lab/erice-2022-data-reduction
+https://github.com/aglie/meerkat
+https://xds.mr.mpg.de/
