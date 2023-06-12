@@ -6,7 +6,7 @@
 
 ## Purpose
 - This repository provides users a step-by-step guide through the SC-XRD data reduction process using state-of-the-art tools such as DIALS and Mdx2. 
-- This process can either be followed with the user's own dataset(s) or by using the provided data of magnetite at 25 °C on surfdrive (must ask for access)
+- This process can either be followed with the user's own dataset(s) or by using the provided data of magnetite at 25 °C on surfdrive ([click here](https://surfdrive.surf.nl/files/index.php/f/13157593254))
 - These tutorials only attempt to document these tools for SC-XRD data reduction, all of the software and libraries mentioned have documentation which has been used to create these tutorials, e.g. the DIALS tutorial is based on dials documentation and all functions mentioned in the tutorial come from the original DIALS docs. 
 
 ## Structure
