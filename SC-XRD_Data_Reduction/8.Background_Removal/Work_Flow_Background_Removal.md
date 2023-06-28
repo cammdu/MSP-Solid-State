@@ -32,7 +32,7 @@ dials.index reindexed.expt strong.refl
 dials.refine_bravais_settings indexed.expt indexed.refl
 ```
 ```
-dials.refine indexed. expt indexed.refl
+dials.refine indexed.expt indexed.refl
 ```
 6. edit refined.expt if your exposure time is 0. Do this with a simple for loop which substitutes 0.0 with your exposure time. The exposure time can be found in the metadata of the files (can be seen easily using a program such as ALBULA
 7. Statistical plots and important information about your dataset can be found using:
