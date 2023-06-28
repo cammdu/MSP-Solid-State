@@ -48,26 +48,55 @@ dials.import ../cbf_background output.experiments=background.expt
 ```
 mdx2.import_geometry refined.expt
 ```
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+10. Look at the file specs
+```
+mdx2.tree geometry.nxs
+```
+11. Import the data from DIALS
+```
+mdx2.import_data refined.expt --chunks 120 120 120
+```
+12. Import the background data from DIALS
+```
+mdx2.import_data background.expt --outfile bkg_data.nxs --chunks 120 120 120
+```
+13. Bin the background image stack
+```
+mdx2.bin_image_series bkg_data.nxs XX XX XX --valid_range XX XX --outfile bkg_data_binned.nxs
+```
+14. Find peaks 
+```
+mdx2.find_peaks geometry.nxs data.nxs --count_threshold 10000
+```
+15. Mask
+```
+mdx2.mask_peaks geometry.nxs data.nxs peaks.nxs --sigma_cutoff 3
+```
+16. Integration    
+```
+mdx2.integrate geometry.nxs data.nxs --mask mask.nxs --subdivide 7 7 7
+```
+17. Corrections 
+```
+mdx2.correct geometry.nxs integrated.nxs --background bkg_data_binned.nxs
+```
+18. Merge
+```
+mdx2.merge corrected.nxss --outfile merged_not_scaled.nxs
+```
+19. Scale
+```
+mdx2.scale corrected.nxs
+```
+20. Make a 2D slice
+```
+mdx2.map geometry.nxs merged.nxs --limits XX XX XX XX XX XX --outfile slice.nxs
+```
+21. Make a complete 3D reciprocal space reconstruction
+```
+mdx2.map geometry.nxs merged.nxs --limits XX XX XX XX XX XX --outfile map.nxs
+```
+22. Open in nexpy
+```
+nexpy
+```
