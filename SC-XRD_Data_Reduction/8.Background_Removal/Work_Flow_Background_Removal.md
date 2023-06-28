@@ -15,7 +15,7 @@ dials.index xds_models.expt strong.refl
 ```
 4. Refine the indexing
 ```
-dials.refine indexed. expt indexed.refl
+dials.refine indexed.expt indexed.refl
 ```
 - if this assigns the proper unit cell, skip steps 5
 5. further refining. Repeat as many times as needed:
